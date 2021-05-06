@@ -24,4 +24,5 @@ Route::post('/login', [AuthController::class, 'login']);
 
 Route::middleware(['auth:sanctum'])->group(function () {
     route::post('/logout', [AuthController::class, 'logout']);
+    Route::resource('/todos', TodoController::class);
 });
